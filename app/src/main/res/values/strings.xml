@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Vehicles</string>
+    <string name="app_name_details">Vehicle Details</string>
+    <string name="base_url">http://private-6d86b9-vehicles5.apiary-mock.com</string>
+    <string name="contentDescription">Image</string>
+    <string name="text_vehicleId">Vehicle ID: %1$s</string>
+    <string name="text_vrn">VRN: %1$s</string>
+    <string name="text_country">Country: %1$s</string>
+    <string name="text_color">Color: %1$s</string>
+    <string name="text_type">Type: %1$s</string>
+
+</resources>

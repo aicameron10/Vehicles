@@ -1,0 +1,50 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="info" type="nl.parkmobile.vehicles.service.model.vehicles.VehiclesData"/>
+        <variable name="callback" type="nl.parkmobile.vehicles.view.callback.VehicleItemCallback"/>
+    </data>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="@{() -> callback.onClick(info)}"
+            android:layout_marginBottom="0.5dp"
+            app:cardCornerRadius="0dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+            <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:gravity="start"
+                    android:text="@{info.vrn}"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"/>
+
+            <ImageView
+                    android:id="@+id/thumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.9"
+                    android:contentDescription="@string/contentDescription"
+                    android:gravity="center"
+                    android:src="@drawable/ic_action_right"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
